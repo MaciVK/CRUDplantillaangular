@@ -1,0 +1,30 @@
+<h1>{{ empleados[0].funcion }}(S)</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>idEmpleado</th>
+      <th>idHospital</th>
+      <th>idSala</th>
+      <th>apellido</th>
+      <th>funcion</th>
+      <th>turno</th>
+      <th>salario</th>
+      <th>
+        <a [routerLink]="['/aumentar']" class="btn btn-success"
+          >AUMENTAR SALARIO</a
+        >
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let empleado of empleados">
+      <td>{{ empleado.idEmpleado }}</td>
+      <td>{{ empleado.idHospital }}</td>
+      <td>{{ empleado.idSala }}</td>
+      <td>{{ empleado.apellido }}</td>
+      <td>{{ empleado.funcion }}</td>
+      <td>{{ empleado.turno }}</td>
+      <td>{{ empleado.salario }}</td>
+    </tr>
+  </tbody>
+</table>
